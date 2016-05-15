@@ -22,3 +22,19 @@ for a static buildpack deployment to do html 5 mode...
 
 
 /// cd - (minus) gets you back to wherre yopu were
+
+git filter-branch --env-filter \
+    'if [ $GIT_COMMIT = 843d9fac2abb5f25af9e88df09c9b2773108f084 ]
+     then
+         export GIT_AUTHOR_DATE="Sun May 15 16:24:40 MDT 2016"
+         export GIT_COMMITTER_DATE="Sun May 15 16:24:40 MDT 2016"
+     fi'
+
+
+
+  ///   init commit 843d9fac2abb5f25af9e88df09c9b2773108f084
+     second commit b4c100c9f008356dadefe14bb6bffa773eaf9a06
+
+
+
+git commit --amend --date "Sun May 15 16:24:40 MDT 2016"
